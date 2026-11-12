@@ -14,6 +14,8 @@ Part of [ai-workspace-kit](https://github.com/cynthiawang109-sudo/ai-workspace-k
 | `review-standards.md` | Global review rules for every project |
 | `context/doc-repos.md` | Index of the documentation repos — where each kind of fact lives |
 | `projects/<app>.md` | Per-app review state only: previously flagged issues and accepted risks, so they are not re-raised |
+| `skills/review-pr/` | The review process as an agent skill (SKILL.md) — usable interactively from Codex or Claude Code |
+| `scripts/review-pr.ps1` / `.sh` | One-command runner for the skill: composes standards, state, contract docs, and the PR diff, runs the review, and (only with an explicit flag) posts it |
 
 ## How a review works
 
