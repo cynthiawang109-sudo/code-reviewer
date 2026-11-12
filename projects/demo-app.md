@@ -16,6 +16,8 @@ here. System knowledge lives in the documentation repos.
   - The new persistent table had no PII story. Fixed: demo-table PII note added to taskflow-api-docs `data-model.md`.
   - Pre-existing, recorded but not fixed in PR #2: `list_tasks()` lacks lower bounds for `cursor`/`limit`.
 
+- 2026-11-12 — demo-app PR #2 merged: TF-101 is closed, and the in-memory storage risk and the /health accepted-risk note below are retired.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
