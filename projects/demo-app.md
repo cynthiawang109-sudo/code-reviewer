@@ -57,6 +57,8 @@ here. System knowledge lives in the documentation repos.
 
 - 2026-11-12 — demo-app PR #9 merged: TF-107 is closed.
 
+- 2026-11-12 — demo-app **v1.2.0 released**: release-check verdict GO (all seven gates) for candidate bc8e1bb; rollback tag `pre-v1.2.0` (7abb11f); on-call Cynthia Wang; GitHub Release published and issue #10 closed. Scope: TF-106 comments + TF-107 spec conformance; CHANGELOG.md introduced with this release.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
