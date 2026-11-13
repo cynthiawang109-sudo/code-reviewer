@@ -59,6 +59,11 @@ here. System knowledge lives in the documentation repos.
 
 - 2026-11-12 — demo-app **v1.2.0 released**: release-check verdict GO (all seven gates) for candidate bc8e1bb; rollback tag `pre-v1.2.0` (7abb11f); on-call Cynthia Wang; GitHub Release published and issue #10 closed. Scope: TF-106 comments + TF-107 spec conformance; CHANGELOG.md introduced with this release.
 
+- 2026-11-12 — PR #11 / TF-109 (observability) reviewed: **request changes**; both findings resolved in b5b9dd0:
+  - Blocker: the access log recorded the raw request path, so user content in a path segment (an email-shaped task id) landed in logs — the severity-1 rule the feature exists to honor. Fixed: the log records the matched route template, or `<unmatched>`; regression tests cover malformed-parameter and unknown paths carrying fictional private content.
+  - Unhandled 500 responses carried no `X-Request-ID`: Starlette's outer error middleware generates them beyond the logging middleware's reach. Fixed by wrapping the whole application (`main.app = AccessLogMiddleware(api)`); the conformance suite now reads OpenAPI via `main.api`. Regression test pins header-equals-log on a forced RuntimeError.
+  - Validation: contracts fetched via doc-search; 88 tests passed, Ruff clean. Awaiting a human merge decision.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
