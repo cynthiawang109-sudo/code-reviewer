@@ -49,6 +49,8 @@ here. System knowledge lives in the documentation repos.
   - Validation: contracts fetched via doc-search; 54 tests passed, Ruff clean. Pre-existing, recorded but not fixed in PR #8: `TaskStore` connections rely on context-manager cleanup without explicit close (the store-wide pattern; caused a Windows temp-file cleanup error in a review reproduction).
   - Awaiting a human merge decision.
 
+- 2026-11-12 — demo-app PR #8 merged: TF-106 is closed.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,

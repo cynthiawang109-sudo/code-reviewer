@@ -50,10 +50,16 @@ is wrong, fix it here first — reviews inherit it.
 
 - `demo-app` implements exactly: `GET /health`, `GET /v1/tasks`,
   `POST /v1/tasks` (201), `GET /v1/tasks/{task_id}`. There is no
-  PATCH or DELETE, and no projects, users, or comments endpoints.
+  PATCH or DELETE, plus the comments operations
+  `GET`/`POST /v1/tasks/{task_id}/comments` and
+  `GET /v1/tasks/{task_id}/comments/{comment_id}` (TF-106, PR #8).
+  There is no PATCH or DELETE, and no projects or users endpoints.
 - The demo task shape is the reduced (`id`, `title`, `status`); list
   responses are `{ "items": [...], "next_cursor": <id|null> }` with an
-  integer cursor. Production invariants (project ownership, soft
+  integer cursor. The demo comment shape is
+  (`id`, `task_id`, `body`, `supersedes_id`); comments implement
+  the append-only revision model, including the chain-head rule
+  (409 `conflict` on a stale supersede). Production invariants (project ownership, soft
   deletes, `completed_at`) are NOT implemented by the demo store.
 - The demo carries the worker's `digest_sends` ledger (`user_id`,
   `week`, `status`, `attempts`, `last_error`, `sent_at`); recipients
