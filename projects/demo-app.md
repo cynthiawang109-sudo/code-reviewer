@@ -35,6 +35,8 @@ here. System knowledge lives in the documentation repos.
 - 2026-11-12 — PR #5 / TF-105 reviewed: **approve**; central request-validation handler resolves the framework `detail` envelope issue recorded after PR #3.
   - API contracts fetched via doc-search; 31 tests passed. No new accepted risks; awaiting merge.
 
+- 2026-11-12 — demo-app PR #5 merged: TF-105 is closed.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
