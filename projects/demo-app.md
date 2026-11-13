@@ -18,6 +18,12 @@ here. System knowledge lives in the documentation repos.
 
 - 2026-11-12 — demo-app PR #2 merged: TF-101 is closed, and the in-memory storage risk and the /health accepted-risk note below are retired.
 
+- 2026-11-12 — demo-app PR #3 (TF-102, board status pagination): review via the review-pr skill, verdict **request changes**; the should-fix and both reviewer corrections resolved in PR follow-ups:
+  - The new `(status, id)` index was created lazily inside store operations; deployment.md §4 requires migrations to run before the service starts. Fixed: schema applies only via `main.migrate()` / `scripts/migrate.py` (pre-start, idempotent, tested against a populated database); /health now reports degraded against an unmigrated database instead of migrating mid-request.
+  - The PR description claimed api-conventions.md already showed a `status` example; it did not. The filter is an additive extension, and the conventions doc now documents it (taskflow-api-docs, same change).
+  - The recorded pagination-bounds item from PR #2 is addressed by clamping (`cursor >= 0`, `1 <= limit <= 200`).
+  - Pre-existing, recorded but not fixed in PR #3: malformed pagination input (`?limit=abc`) returns FastAPI's `detail` envelope instead of the contract's `error` envelope. Needs a central `RequestValidationError` handler in a future change.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
