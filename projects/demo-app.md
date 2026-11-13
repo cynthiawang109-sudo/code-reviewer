@@ -24,6 +24,8 @@ here. System knowledge lives in the documentation repos.
   - The recorded pagination-bounds item from PR #2 is addressed by clamping (`cursor >= 0`, `1 <= limit <= 200`).
   - Pre-existing, recorded but not fixed in PR #3: malformed pagination input (`?limit=abc`) returns FastAPI's `detail` envelope instead of the contract's `error` envelope. Needs a central `RequestValidationError` handler in a future change.
 
+- 2026-11-12 — demo-app PR #3 merged: TF-102 is closed.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
