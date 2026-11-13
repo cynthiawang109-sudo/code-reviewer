@@ -37,6 +37,10 @@ here. System knowledge lives in the documentation repos.
 
 - 2026-11-12 — demo-app PR #5 merged: TF-105 is closed.
 
+- PR #6 reviewed: **request changes** — CI build job must build a container to satisfy deployment.md; compile/import checks alone are insufficient release evidence.
+  - Validation: contracts fetched through doc-search; 31 tests, Ruff, and compile/import checks passed. No new risks accepted.
+  - Addressed in the follow-up commit: Dockerfile + .dockerignore added; the build job now docker-builds the image and smoke-tests the running container's /health (CI run 43349313187, all three jobs green; smoke test received {"status":"ok"}). Awaiting a human merge decision.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
