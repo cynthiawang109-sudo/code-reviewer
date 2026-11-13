@@ -41,6 +41,8 @@ here. System knowledge lives in the documentation repos.
   - Validation: contracts fetched through doc-search; 31 tests, Ruff, and compile/import checks passed. No new risks accepted.
   - Addressed in the follow-up commit: Dockerfile + .dockerignore added; the build job now docker-builds the image and smoke-tests the running container's /health (CI run 43349313187, all three jobs green; smoke test received {"status":"ok"}). Awaiting a human merge decision.
 
+- 2026-11-12 — demo-app PR #6 merged, and **v1.1.0 released**: release-check verdict GO (all seven gate items) for candidate 7abb11f; rollback tag `pre-v1.1.0` (3d7a37b, caveat recorded in issue #7); on-call Cynthia Wang; GitHub Release published and issue #7 closed.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
