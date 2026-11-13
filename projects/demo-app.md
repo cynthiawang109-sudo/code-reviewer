@@ -51,6 +51,10 @@ here. System knowledge lives in the documentation repos.
 
 - 2026-11-12 — demo-app PR #8 merged: TF-106 is closed.
 
+- 2026-11-12 — PR #9 / TF-107 (spec conformance) reviewed: **approve**, no findings.
+  - Validation: contracts fetched via doc-search; 75 tests passed including 21 conformance cases; Ruff clean. The PR's own Actions run was the first live exercise of the new `spec` job — all four jobs (pytest, lint, build, spec) green.
+  - Awaiting a human merge decision.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
