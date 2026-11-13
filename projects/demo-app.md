@@ -30,6 +30,8 @@ here. System knowledge lives in the documentation repos.
   - Validation: 22 tests passed; focused reproductions exposed PII leakage, duplicate concurrent deliveries, lost attempt accounting, and missing CLI attempt logs. No new risks accepted.
   - All findings addressed in 9c545a0 (error codes only, never exception messages; SQL-side attempt increments and OS-locked outbox dedupe; bounded exponential backoff with an injected sleeper; CLI logs to stderr; runbook reset steps). 26 tests pass; awaiting a human merge decision.
 
+- 2026-11-12 — demo-app PR #4 merged: TF-103 is closed. All four tickets (TF-101…TF-104) are now done.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
