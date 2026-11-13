@@ -24,3 +24,11 @@ Small and org-wide on purpose. App-specific rules belong in
   finding.
 - Pre-existing problems in touched code are reported separately from issues
   the change introduces.
+
+## Documentation changes
+
+Pull requests in the documentation repos are reviewed with the
+review-docs skill (`skills/review-docs/SKILL.md`): consistency with
+the whole corpus and with the established facts recorded in
+`projects/<repo>.md` takes the place of contract conformance. The
+style of findings above applies unchanged.
