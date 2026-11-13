@@ -55,6 +55,8 @@ here. System knowledge lives in the documentation repos.
   - Validation: contracts fetched via doc-search; 75 tests passed including 21 conformance cases; Ruff clean. The PR's own Actions run was the first live exercise of the new `spec` job — all four jobs (pytest, lint, build, spec) green.
   - Awaiting a human merge decision.
 
+- 2026-11-12 — demo-app PR #9 merged: TF-107 is closed.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
