@@ -43,6 +43,12 @@ here. System knowledge lives in the documentation repos.
 
 - 2026-11-12 — demo-app PR #6 merged, and **v1.1.0 released**: release-check verdict GO (all seven gate items) for candidate 7abb11f; rollback tag `pre-v1.1.0` (3d7a37b, caveat recorded in issue #7); on-call Cynthia Wang; GitHub Release published and issue #7 closed.
 
+- 2026-11-12 — PR #8 / TF-106 (comments) reviewed: **request changes**; both should-fixes resolved in follow-ups:
+  - The new `comments` table had no PII story; data-model.md's reviewer rule requires one before a migration is approved. Fixed in taskflow-api-docs 715f6fd (bodies are fictional-data-only free text, never echoed in errors or logs; append-only retention stated).
+  - `ping()` probed only `tasks`, so a pre-TF-106 database reported healthy while comments routes returned 503. Fixed in 4117668: ping probes both tables, and a legacy-schema upgrade test pins degraded-before / healthy-after migrate().
+  - Validation: contracts fetched via doc-search; 54 tests passed, Ruff clean. Pre-existing, recorded but not fixed in PR #8: `TaskStore` connections rely on context-manager cleanup without explicit close (the store-wide pattern; caused a Windows temp-file cleanup error in a review reproduction).
+  - Awaiting a human merge decision.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
