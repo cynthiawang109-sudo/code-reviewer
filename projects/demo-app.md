@@ -66,6 +66,10 @@ here. System knowledge lives in the documentation repos.
 
 - 2026-11-12 — demo-app PR #11 merged: TF-109 is closed.
 
+- 2026-11-13 — PR #12 / TF-111 (Dependabot, CodeQL, SECURITY.md) reviewed: **approve**, no findings.
+  - Validation: all six PR checks green including CodeQL Analyze (python); 88 tests passed locally; private vulnerability reporting verified enabled on the repo.
+  - Awaiting a human merge decision.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
