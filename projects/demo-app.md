@@ -26,6 +26,10 @@ here. System knowledge lives in the documentation repos.
 
 - 2026-11-12 — demo-app PR #3 merged: TF-102 is closed.
 
+- PR #4 / TF-103 reviewed: **request changes** — sanitize sender diagnostics; serialize concurrent work and deduplication; add retry backoff, CLI attempt logging, and ledger recovery guidance.
+  - Validation: 22 tests passed; focused reproductions exposed PII leakage, duplicate concurrent deliveries, lost attempt accounting, and missing CLI attempt logs. No new risks accepted.
+  - All findings addressed in 9c545a0 (error codes only, never exception messages; SQL-side attempt increments and OS-locked outbox dedupe; bounded exponential backoff with an injected sleeper; CLI logs to stderr; runbook reset steps). 26 tests pass; awaiting a human merge decision.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
