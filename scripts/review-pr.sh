@@ -32,7 +32,7 @@ ${diff}
 \`\`\`"
 
 out="${root}/review-${app}-${pr}.md"
-printf '%s' "$prompt" | codex exec --sandbox read-only -C "$root" \
+printf '%s' "$prompt" | codex exec --sandbox "${SANDBOX:-read-only}" -C "$root" \
     -c 'model_reasoning_effort="medium"' - > "$out"
 
 echo "Review written to $out"

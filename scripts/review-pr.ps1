@@ -13,7 +13,12 @@
 param(
     [Parameter(Mandatory = $true)][string]$Repo,
     [Parameter(Mandatory = $true)][int]$Pr,
-    [switch]$Post
+    [switch]$Post,
+    # If Codex reports "Failed to create unified exec process: timed out
+    # ... connecting runner pipe-in", its sandboxed shell runner is
+    # wedged on this machine; rerun with -Sandbox danger-full-access.
+    [ValidateSet('read-only', 'workspace-write', 'danger-full-access')]
+    [string]$Sandbox = 'read-only'
 )
 
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
@@ -47,7 +52,7 @@ $($diff -join "`n")
 
 $outFile = Join-Path $root ("review-{0}-{1}.md" -f $app, $Pr)
 # PS 5.1 mangles long multi-line native-command arguments; stdin is safe.
-$prompt | & $codex exec --sandbox read-only -C $root -c 'model_reasoning_effort="medium"' - |
+$prompt | & $codex exec --sandbox $Sandbox -C $root -c 'model_reasoning_effort="medium"' - |
     Out-File -Encoding utf8 $outFile
 
 Write-Output "Review written to $outFile"
