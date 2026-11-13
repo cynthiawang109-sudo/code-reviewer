@@ -70,6 +70,8 @@ here. System knowledge lives in the documentation repos.
   - Validation: all six PR checks green including CodeQL Analyze (python); 88 tests passed locally; private vulnerability reporting verified enabled on the repo.
   - Awaiting a human merge decision.
 
+- 2026-11-13 — demo-app PR #12 merged: TF-111 is closed.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
