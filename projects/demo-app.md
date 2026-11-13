@@ -64,6 +64,8 @@ here. System knowledge lives in the documentation repos.
   - Unhandled 500 responses carried no `X-Request-ID`: Starlette's outer error middleware generates them beyond the logging middleware's reach. Fixed by wrapping the whole application (`main.app = AccessLogMiddleware(api)`); the conformance suite now reads OpenAPI via `main.api`. Regression test pins header-equals-log on a forced RuntimeError.
   - Validation: contracts fetched via doc-search; 88 tests passed, Ruff clean. Awaiting a human merge decision.
 
+- 2026-11-12 — demo-app PR #11 merged: TF-109 is closed.
+
 ## Accepted risks
 
 - In-memory storage loses tasks on restart. Accepted: demo data only,
