@@ -22,7 +22,7 @@ here. System knowledge lives in the documentation repos.
   - The new `(status, id)` index was created lazily inside store operations; deployment.md §4 requires migrations to run before the service starts. Fixed: schema applies only via `main.migrate()` / `scripts/migrate.py` (pre-start, idempotent, tested against a populated database); /health now reports degraded against an unmigrated database instead of migrating mid-request.
   - The PR description claimed api-conventions.md already showed a `status` example; it did not. The filter is an additive extension, and the conventions doc now documents it (taskflow-api-docs, same change).
   - The recorded pagination-bounds item from PR #2 is addressed by clamping (`cursor >= 0`, `1 <= limit <= 200`).
-  - Pre-existing, recorded but not fixed in PR #3: malformed pagination input (`?limit=abc`) returns FastAPI's `detail` envelope instead of the contract's `error` envelope. Needs a central `RequestValidationError` handler in a future change.
+  - Pre-existing, recorded but not fixed in PR #3: malformed pagination input (`?limit=abc`) returns FastAPI's `detail` envelope instead of the contract's `error` envelope. Needs a central `RequestValidationError` handler in a future change. **Resolved by PR #5 (TF-105).**
 
 - 2026-11-12 — demo-app PR #3 merged: TF-102 is closed.
 
@@ -31,6 +31,9 @@ here. System knowledge lives in the documentation repos.
   - All findings addressed in 9c545a0 (error codes only, never exception messages; SQL-side attempt increments and OS-locked outbox dedupe; bounded exponential backoff with an injected sleeper; CLI logs to stderr; runbook reset steps). 26 tests pass; awaiting a human merge decision.
 
 - 2026-11-12 — demo-app PR #4 merged: TF-103 is closed. All four tickets (TF-101…TF-104) are now done.
+
+- 2026-11-12 — PR #5 / TF-105 reviewed: **approve**; central request-validation handler resolves the framework `detail` envelope issue recorded after PR #3.
+  - API contracts fetched via doc-search; 31 tests passed. No new accepted risks; awaiting merge.
 
 ## Accepted risks
 
