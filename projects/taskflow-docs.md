@@ -48,6 +48,14 @@ is wrong, fix it here first — reviews inherit it.
   - `environments.md` allowed direct DB writes in `dev`, against the
     sole-writer rule; dev writes now go through the local api-service.
 
+- 2026-11-12 — taskflow-docs PR #1 (planted test for the new
+  review-docs skill): verdict **request changes**. The skill caught
+  both planted defects — "3 attempts" against the established
+  5-attempt policy (cited the state file, system-overview, ADR-0003,
+  and webhooks) and a reference to a non-existent `scaling.md`.
+  Review posted to the PR; PR closed unmerged and the branch
+  deleted. Established facts unchanged.
+
 ## Accepted risks
 
 - None recorded yet.
