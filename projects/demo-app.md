@@ -76,6 +76,8 @@ here. System knowledge lives in the documentation repos.
 - 2026-11-13 - PR #35 (root JSON index) reviewed: **approve**, no findings. API conventions fetched via doc-search; 92 tests and Ruff passed. Root response and OpenAPI exclusion covered; no new accepted risks. Merged 2026-11-13; live root index verified after the Render redeploy.
 - 2026-11-14 - PR #36 reviewed: approve, no findings. PR template aligns with GitHub Issues workflow; change-process.md fetched via doc-search. 92 local tests passed. No new accepted risks. Merged 2026-11-14 (template unification sweep).
 - 2026-11-14 — PR #37 reviewed: approve, no findings. Deployment and release contracts fetched via doc-search; all seven PR checks and 92 local tests passed. Gitleaks remains advisory under branch protection. No new accepted risks. Merged 2026-11-14 (gitleaks CI rollout).
+- 2026-11-14 - PR #38 reviewed (5 rounds): final **approve**, no findings; 146 tests and Ruff passed. Rounds 1-4 fixed, in order: stranded `running` job recovery + documented one-shot health exception + user_id in lifecycle logs; retry timestamps from an injectable clock; per-kind payload schemas validated before persistence and dispatch (an email address supplied as user_id had reached digest logs - the round-3 blocker); completion-time updated_at. Merged 2026-11-14 (worker slice: worker.py queue with backoff/dead-letter, scripts/run_worker.py, jobs schema via the existing migration path).
+
 
 
 

@@ -59,6 +59,8 @@ is wrong, fix it here first — reviews inherit it.
 - Hosted demo SQLite storage is ephemeral, never backed up, and resets on redeploy or restart; runbook step 3 retains a pre-existing local-only persistence assumption.
 - PR #5 reviewed: approve - PR template now requests a GitHub Issue reference, consistent with the change process and workspace ticket migration. Documentation checks passed; established facts and accepted risks unchanged. Merged 2026-11-14 (template unification sweep).
 - PR #6 reviewed: approve — adds secret scanning on PRs/main pushes and removes the PR path filter so required documentation checks run consistently. Local documentation checks and PR CI passed; branch-protection enforcement remains a separate step. Established facts and accepted risks unchanged. Merged 2026-11-14 (gitleaks CI rollout).
+- PR #7 reviewed: approve - demo queue recovery agrees with fetched contracts and worker implementation; documentation and PR checks passed. Established facts and accepted risks unchanged; existing hosted-storage wording issue remains separate. Merged 2026-11-14 (incident-runbook jobs recovery procedure, companion to demo-app PR #38).
+
 
 
 
