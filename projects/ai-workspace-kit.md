@@ -19,3 +19,5 @@
 ## Previously flagged
 
 - 2026-11-14 - PR #26 reviewed: approve; no introduced findings. PR template aligns with GitHub Issues workflow. Process contracts fetched through doc-search; 19 tests passed. No new risks accepted. Merged 2026-11-14 (template unification sweep).
+- 2026-11-14 — PR #27: approve; no introduced findings. Deployment and process contracts fetched through doc-search. Merged 2026-11-14 (gitleaks CI rollout).
+

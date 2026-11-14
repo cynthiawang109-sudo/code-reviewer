@@ -89,6 +89,8 @@ is wrong, fix it here first — reviews inherit it.
 - Server-list change preserves API contract definitions; documentation consistency checks passed.
 - PR #4 merged 2026-11-13 after the fix: the data-model demo note and the taskflow-docs backup exclusion now scope storage claims to local vs hosted runs (hosted demo: ephemeral filesystem, never backed up, resets on redeploy/restart).
 - PR #5 reviewed: approve - PR template now requests GitHub Issue references, consistent with the change process and workspace ticket migration; no API contract changes or new accepted risks. Merged 2026-11-14 (template unification sweep).
+- PR #6 reviewed: approve — adds gitleaks CI and removes the PR docs path filter so workflow-only changes run the required docs check. All PR checks passed; no API contract changes or new accepted risks. Merged 2026-11-14 (gitleaks CI rollout).
+
 
 
 

@@ -12,3 +12,5 @@
 ## Previously flagged
 
 - PR #4 reviewed: approve - PR template now requests a GitHub issue, consistent with fetched change-process S1 and workspace ticket governance. No new risks accepted. Merged 2026-11-14 (template unification sweep).
+- PR #5 reviewed: approve — secret-scanning workflow adds PR/main coverage with read-only permissions; gitleaks check passed. Required-check enforcement remains a separate step. No new risks accepted. Merged 2026-11-14 (gitleaks CI rollout).
+
