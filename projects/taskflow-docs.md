@@ -57,6 +57,8 @@ is wrong, fix it here first — reviews inherit it.
   deleted. Established facts unchanged.
 - PR #4: **approve** - demo backup exclusion correctly distinguishes local and hosted runs; documentation checks passed. Merged 2026-11-13.
 - Hosted demo SQLite storage is ephemeral, never backed up, and resets on redeploy or restart; runbook step 3 retains a pre-existing local-only persistence assumption.
+- PR #5 reviewed: approve - PR template now requests a GitHub Issue reference, consistent with the change process and workspace ticket migration. Documentation checks passed; established facts and accepted risks unchanged. Merged 2026-11-14 (template unification sweep).
+
 
 
 ## Accepted risks

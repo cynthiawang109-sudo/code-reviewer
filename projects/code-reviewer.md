@@ -7,3 +7,8 @@
 - PR #3 reviewed: **request changes** - qualify unavailable status-change/delete examples as demo-specific; production contracts support both. Error-code and pagination rules match fetched contracts. No new risks accepted.
 - PR #3 merged 2026-11-14 after the fix: the TypeScript/Next.js section's examples are scoped to demo-app, whose implemented subset omits the production contract's PATCH and DELETE task endpoints.
 
+
+
+## Previously flagged
+
+- PR #4 reviewed: approve - PR template now requests a GitHub issue, consistent with fetched change-process S1 and workspace ticket governance. No new risks accepted. Merged 2026-11-14 (template unification sweep).

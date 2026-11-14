@@ -14,3 +14,8 @@
 - 2026-11-13 - PR #23: request changes; remove the outside-system provenance reference and correct Atlassian v1 transition wording.
 - Contracts fetched through doc-search; 21 tests passed and example TOML validated. No new risks accepted.
 - Findings fixed (56691fc); PR #23 merged 2026-11-13.
+
+
+## Previously flagged
+
+- 2026-11-14 - PR #26 reviewed: approve; no introduced findings. PR template aligns with GitHub Issues workflow. Process contracts fetched through doc-search; 19 tests passed. No new risks accepted. Merged 2026-11-14 (template unification sweep).

@@ -74,6 +74,8 @@ here. System knowledge lives in the documentation repos.
 - 2026-11-13 - PR #33 reviewed: **approve**, no findings. Contracts fetched via doc-search; 91 tests and Ruff passed. Migration-before-start and CORS logging verified; live Render deployment remains unverified. Merged 2026-11-13 after human approval.
 - 2026-11-13 - PR #34 reviewed: **approve**, no findings. Deployment and health contracts fetched via doc-search; live `/health` returned 200 `{"status":"ok"}`; 91 local tests and all six PR checks passed. No new accepted risks. Merged 2026-11-13.
 - 2026-11-13 - PR #35 (root JSON index) reviewed: **approve**, no findings. API conventions fetched via doc-search; 92 tests and Ruff passed. Root response and OpenAPI exclusion covered; no new accepted risks. Merged 2026-11-13; live root index verified after the Render redeploy.
+- 2026-11-14 - PR #36 reviewed: approve, no findings. PR template aligns with GitHub Issues workflow; change-process.md fetched via doc-search. 92 local tests passed. No new accepted risks. Merged 2026-11-14 (template unification sweep).
+
 
 
 
