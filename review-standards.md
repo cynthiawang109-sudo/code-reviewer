@@ -42,7 +42,8 @@ style of findings above applies unchanged.
    never on `message` wording. Cursor pagination follows the published
    contract in `taskflow-api-docs`; no invented endpoints or client-side
    faking of operations the API does not offer (such as status changes or
-   deletes).
+   deletes when targeting `demo-app`, whose implemented subset omits the
+   production contract's PATCH and DELETE task endpoints).
 3. **Rendering boundaries** — secrets and non-public environment variables
    never reach client components. Browser code may reference only
    `NEXT_PUBLIC_*` values; check that those values contain nothing sensitive.
