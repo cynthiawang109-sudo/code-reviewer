@@ -55,6 +55,9 @@ is wrong, fix it here first — reviews inherit it.
   and webhooks) and a reference to a non-existent `scaling.md`.
   Review posted to the PR; PR closed unmerged and the branch
   deleted. Established facts unchanged.
+- PR #4: **approve** - demo backup exclusion correctly distinguishes local and hosted runs; documentation checks passed. Merged 2026-11-13.
+- Hosted demo SQLite storage is ephemeral, never backed up, and resets on redeploy or restart; runbook step 3 retains a pre-existing local-only persistence assumption.
+
 
 ## Accepted risks
 

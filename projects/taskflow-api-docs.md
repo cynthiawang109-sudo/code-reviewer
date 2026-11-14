@@ -85,6 +85,10 @@ is wrong, fix it here first — reviews inherit it.
   surface above). Corrected in 4331e79, which also added
   `store_unavailable` to the error catalog — the code the demo
   actually returns when its store is down.
+- PR #4 - request changes: public default server conflicts with developer-machine-only storage descriptions; distinguish local and hosted demo behavior.
+- Server-list change preserves API contract definitions; documentation consistency checks passed.
+- PR #4 merged 2026-11-13 after the fix: the data-model demo note and the taskflow-docs backup exclusion now scope storage claims to local vs hosted runs (hosted demo: ephemeral filesystem, never backed up, resets on redeploy/restart).
+
 
 ## Accepted risks
 
