@@ -71,6 +71,8 @@ here. System knowledge lives in the documentation repos.
   - Awaiting a human merge decision.
 
 - 2026-11-13 — demo-app PR #12 merged: TF-111 is closed.
+- 2026-11-13 - PR #33 reviewed: **approve**, no findings. Contracts fetched via doc-search; 91 tests and Ruff passed. Migration-before-start and CORS logging verified; live Render deployment remains unverified. Merged 2026-11-13 after human approval.
+
 
 ## Accepted risks
 
