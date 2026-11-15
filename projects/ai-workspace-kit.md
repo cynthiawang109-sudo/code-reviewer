@@ -22,3 +22,5 @@
 - 2026-11-14 — PR #27: approve; no introduced findings. Deployment and process contracts fetched through doc-search. Merged 2026-11-14 (gitleaks CI rollout).
 - 2026-11-14 — PR #28: approve; no introduced findings. Process, system, and API contracts fetched through doc-search.
 - Validation: 19 tests passed; 23-page preparation, unchanged-batch skipping, and mocked result/state handling passed. Live Confluence writes not exercised. No new risks accepted.
+- PR #29: approve with nits; correct obsolete proprietary-license instructions in `PUBLISHING.md`. No new risks accepted.
+- Validation: 20 tests passed; sdist/wheel build, Twine checks, and installed-wheel MCP smoke passed using existing dependencies. Contracts fetched through doc-search; live publication not exercised.
