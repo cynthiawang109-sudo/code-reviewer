@@ -27,3 +27,5 @@
 - PR #31: approve with nits; qualify publication metadata to distinguish published 0.1.0 from pending 0.1.1. No new risks accepted.
 - Validation: contracts fetched through doc-search; 22 tests passed on `cf070324`, including prefix-sibling rejection for both allowed roots. Build/publication checks not rerun.
 - PR #32: approve; no introduced findings. Process contracts fetched through doc-search; official registry confirms 0.1.1 active. All 22 tests passed on `d5b9644`. No new risks accepted.
+- PR #33: approve; no introduced findings. Deployment, runbook, and process contracts fetched through doc-search. No new risks accepted.
+- Validation: 22 tests and five release-version guard checks passed on `8f6f00f`; live Slack delivery and publication not exercised.
