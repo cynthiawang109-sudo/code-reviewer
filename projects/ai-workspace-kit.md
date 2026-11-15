@@ -24,3 +24,5 @@
 - Validation: 19 tests passed; 23-page preparation, unchanged-batch skipping, and mocked result/state handling passed. Live Confluence writes not exercised. No new risks accepted.
 - PR #29: approve with nits; correct obsolete proprietary-license instructions in `PUBLISHING.md`. No new risks accepted.
 - Validation: 20 tests passed; sdist/wheel build, Twine checks, and installed-wheel MCP smoke passed using existing dependencies. Contracts fetched through doc-search; live publication not exercised.
+- PR #31: approve with nits; qualify publication metadata to distinguish published 0.1.0 from pending 0.1.1. No new risks accepted.
+- Validation: contracts fetched through doc-search; 22 tests passed on `cf070324`, including prefix-sibling rejection for both allowed roots. Build/publication checks not rerun.
